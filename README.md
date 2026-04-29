@@ -1,73 +1,130 @@
-# React + TypeScript + Vite
+# 💈 Barbearia Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 Descrição do Projeto
 
-Currently, two official plugins are available:
+Este projeto consiste em uma aplicação web desenvolvida com **React**, **TypeScript** e **Bootstrap**, com o objetivo de simular um sistema de gerenciamento de atendimentos de uma barbearia.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+A aplicação permite visualizar atendimentos, acompanhar o status de cada serviço e observar métricas atualizadas em tempo real através de um dashboard dinâmico.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🎯 Objetivo
 
-## Expanding the ESLint configuration
+Desenvolver uma aplicação funcional aplicando conceitos de:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+* Componentização
+* Tipagem com TypeScript
+* Organização de código
+* Gerenciamento de estado
+* Interface responsiva com Bootstrap
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 🛠️ Tecnologias Utilizadas
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* React (Vite)
+* TypeScript
+* Bootstrap (via CDN)
+* CSS externo
+
+---
+
+## 🏗️ Arquitetura do Projeto
+
+O projeto foi estruturado com base na separação de responsabilidades, visando organização, escalabilidade e reutilização de código.
+
+### 📁 Estrutura de Pastas
+
+```
+src/
+ ├── components/     # Componentes reutilizáveis (Navbar, Sidebar, Cards, Dashboard)
+ ├── interfaces/     # Interfaces TypeScript para tipagem dos dados
+ ├── data/           # Dados mockados da aplicação
+ ├── styles/         # Estilização personalizada (CSS)
+ ├── assets/         # Imagens e ícones
+ ├── App.tsx         # Componente principal
+ └── main.tsx        # Ponto de entrada da aplicação
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+---
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## 🧩 Componentização
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+A interface foi dividida em componentes reutilizáveis, como:
+
+* Navbar
+* Sidebar
+* Dashboard
+* AtendimentoCard
+
+Essa abordagem melhora a organização e facilita manutenção e evolução do sistema.
+
+---
+
+## 🔐 Tipagem com TypeScript
+
+Foram utilizadas interfaces para garantir segurança e consistência dos dados.
+
+Exemplo:
+
+* `IAtendimento`
+
+Isso evita erros e melhora a previsibilidade do código.
+
+---
+
+## 📊 Funcionalidades
+
+* Listagem de atendimentos
+* Alteração de status (ex: concluir atendimento)
+* Dashboard com contadores dinâmicos
+* Atualização automática dos dados ao interagir
+* Interface responsiva
+
+---
+
+## 📱 Responsividade
+
+O layout foi desenvolvido utilizando o sistema de grid do Bootstrap:
+
+* Desktop: estrutura com sidebar + conteúdo principal
+* Mobile: adaptação com empilhamento de colunas
+
+---
+
+## 🧾 Semântica HTML5
+
+Foram utilizadas as seguintes tags semânticas:
+
+* `<header>`
+* `<main>`
+* `<section>`
+* `<aside>`
+* `<address>`
+
+---
+
+## 🚀 Como Executar o Projeto
+
+```bash
+# Instalar dependências
+npm install
+
+# Rodar o projeto
+npm run dev
 ```
+
+---
+
+## 👨‍🎓 Identificação
+
+**Aluno:** Guilherme Lourenço Guimarães
+**Disciplina:** Desenvolvimento Web
+**Professor:** Fernando
+**Data:** 2026
+
+---
+
+## 📌 Considerações Finais
+
+O projeto foi desenvolvido com foco na organização, clareza e boas práticas de desenvolvimento front-end, utilizando tecnologias modernas e amplamente utilizadas no mercado.
