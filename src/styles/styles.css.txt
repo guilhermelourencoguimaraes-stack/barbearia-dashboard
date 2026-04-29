@@ -1,0 +1,63 @@
+body {
+    background-color: #f4f6f9;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navbar */
+
+.navbar {
+    height: 60px;
+}
+
+/* Sidebar */
+
+aside {
+    border-right: 1px solid #ddd;
+}
+
+aside .nav-link {
+    color: #333;
+    font-weight: 500;
+}
+
+aside .nav-link:hover {
+    background-color: #e9ecef;
+    border-radius: 5px;
+}
+
+/* Dashboard */
+
+h1 {
+    font-weight: bold;
+}
+
+/* Cards do Dashboard */
+
+.card {
+    border-radius: 10px;
+}
+
+/* Cards de atendimento */
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Botões */
+
+.btn-primary {
+    width: 100%;
+}
+
+/* Responsividade */
+
+@media (max-width: 768px) {
+
+    aside {
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+}
